@@ -1,8 +1,11 @@
-# Dojo Arena Instructions
+# Dojo Arena
+#### Clone this repo to your Desktop
 
 ##### In this group activity, you and your partner will be creating the opening sequences of a Street Fighter-like game. The wireframes and images are provided in this repo. It is not required to use the same images. Have fun!
 
-### Clone this repo to your Desktop
+
+
+##### Assignment Instructions:
 
 1. When the document loads, display a game window with a "Select Arena" module with 6 different arena options. When the user hovers over each button, the correct image of the arena should be displayed onto the game window. __*Refer to Wireframe 1*__
 
