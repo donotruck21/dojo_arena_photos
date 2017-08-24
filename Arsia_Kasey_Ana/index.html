@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+        <title>Dojo Arena</title>
+        <link type="text/css" href="style.css" rel="stylesheet">
+        <script type="text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                $("#beachButton").hover(function(){
+                    $("#frame1").css("background-image",  "url(../beach.jpg)");
+                }, function(){
+                    $("#frame1").css("background-image", "none");
+                });
+
+                $("#planetButton").hover(function(){
+                    $("#frame1").css("background-image",  "url(../earth.jpg)");
+                }, function(){
+                    $("#frame1").css("background-image", "none");
+                });
+
+                $("#dojoButton").hover(function(){
+                    $("#frame1").css("background-image",  "url(../dojo.jpg)");
+                }, function(){
+                    $("#frame1").css("background-image", "none");
+                });
+
+                $("#forestButton").hover(function(){
+                    $("#frame1").css("background-image",  "url(../forest.jpg)");
+                }, function(){
+                    $("#frame1").css("background-image", "none");
+                });
+
+                $("#matrixButton").hover(function(){
+                    $("#frame1").css("background-image",  "url(../matrix.jpg)");
+                }, function(){
+                    $("#frame1").css("background-image", "none");
+                });
+
+                $("#snowButton").hover(function(){
+                    $("#frame1").css("background-image",  "url(../snow.jpg)");
+                }, function(){
+                    $("#frame1").css("background-image", "none");
+                });
+                ///////////////////////////////////////////////
+                $("#beachButton").click(function(){
+                    $("#beachButton").hover(function(){
+                        $("#frame1").css("background-image",  "url(../beach.jpg)");});
+                    $("#frame1Menu").css("display", "none");
+                    $("#frame2Menu").css("display", "inline-block");
+                });
+                $("#planetButton").click(function(){
+                    $("#planetButton").hover(function(){
+                        $("#frame1").css("background-image",  "url(../earth.jpg)");});
+                    $("#frame1Menu").css("display", "none");
+                    $("#frame2Menu").css("display", "inline-block");
+                });
+                $("#dojoButton").click(function(){
+                    $("#dojoButton").hover(function(){
+                        $("#frame1").css("background-image",  "url(../dojo.jpg)");});
+                    $("#frame1Menu").css("display", "none");
+                    $("#frame2Menu").css("display", "inline-block");
+                });
+                $("#forestButton").click(function(){
+                    $("#forestButton").hover(function(){
+                        $("#frame1").css("background-image",  "url(../forest.jpg)");});
+                    $("#frame1Menu").css("display", "none");
+                    $("#frame2Menu").css("display", "inline-block");
+                });
+                $("#matrixButton").click(function(){
+                    $("#matrixButton").hover(function(){
+                        $("#frame1").css("background-image",  "url(../matrix.jpg)");});
+                    $("#frame1Menu").css("display", "none");
+                    $("#frame2Menu").css("display", "inline-block");
+                });
+                $("#snowButton").click(function(){
+                    $("#snowButton").hover(function(){
+                        $("#frame1").css("background-image",  "url(../snow.jpg)");});
+                    $("#frame1Menu").css("display", "none");
+                    $("#frame2Menu").css("display", "inline-block");
+                });
+                
+
+            });
+            $(document).on("change", "#selectLeft", function(){
+                $(".pics1").css("display", "none");
+                var char = $(this).val();
+                $("#" + char).css("display", "inline-block");
+
+            });
+            $(document).on("change", "#selectRight", function(){
+                $(".pics2").css("display", "none");
+                var char = $(this).val();
+                $("#" + char).css("display", "inline-block");
+
+            });
+
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="frame1">
+                <div id="frame1Menu">
+                    <h1> Select Arena </h1>
+                    <button class="mainOptions" id="beachButton">Beach</button>     
+                    <button class="mainOptions" id="planetButton">Planet</button>
+                    <button class="mainOptions" id="dojoButton">Dojo</button>
+                    <button class="mainOptions" id="forestButton">Forest</button>
+                    <button class="mainOptions" id="matrixButton">Matrix</button>
+                    <button class="mainOptions" id="snowButton">Snow</button>
+        
+                </div>
+                <div id="frame2Menu">
+                    <h1> Select Players </h1>
+                    <select id="selectLeft">
+                        <option value="SelectNinja">Select Ninja</option>
+                        <option value="Leonardo1">Leonardo</option>
+                        <option value="Raphael1">Raphael</option>
+                        <option value="Mikey1">Mikey</option>
+                        <option value="Donatello1">Donatello</option>
+                    </select>
+                    <select id="selectRight">
+                        <option value="SelectNinja">Select Ninja</option>
+                        <option value="Leonardo2">Leonardo</option>
+                        <option value="Raphael2">Raphael</option>
+                        <option value="Mikey2">Mikey</option>
+                        <option value="Donatello2">Donatello</option>
+                    </select>
+        
+                </div>
+                <div id="images">
+                    <img id="Leonardo1" class="pics1"  src="../leo.png" alt="leo">
+                    <img id="Raphael1" class="pics1" src="../raphael.png" alt="ralph">
+                    <img id="Mikey1" class="pics1" src="../mikey.png" alt="mike">
+                    <img id="Donatello1" class="pics1" src="../donny.png" alt="donny">
+                    <img id="Leonardo2" class="pics2"  src="../leo.png"  alt="leo">
+                    <img id="Raphael2" class="pics2" src="../raphael.png" alt="ralph">
+                    <img id="Mikey2" class="pics2" src="../mikey.png" alt="mike">
+                    <img id="Donatello2" class="pics2" src="../donny.png" alt="donny">
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
