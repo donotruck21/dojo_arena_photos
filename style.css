@@ -1,0 +1,52 @@
+body{
+	font-family: sans-serif;
+}
+h1{
+	font-size: 24px;
+	color: orange;
+	text-shadow: 2px white;
+}
+.container{
+	height: 960px;
+	width: 944px;
+	padding: 0px 300px;
+	margin: 0px;
+	background-color: black;
+	display: inline-block;
+}
+.select1{
+	height: 192px;
+	width: 280px;
+	padding: 20px 30px;
+	margin: 200px 302px 0px 302px;
+	background: gainsboro;
+	border: 4px solid grey;
+	border-radius: 10px;
+	display: inline-block;
+	text-align: center;
+}
+.map{
+	text-align: center;
+	width: 70px;
+	height: 20px;
+	margin: 10px;
+	background-color: white;
+	display: inline-block;
+}
+.imgrow{
+	height: 400px;
+	width: 944px;
+	display: inline-block;
+}
+.player1img{
+	width: 250px;
+	display: inline-block;
+	margin-right: 220px;
+	vertical-align: top;
+}
+.player2img{
+	width: 250px;
+	display: inline-block;
+	margin-left: 220px;
+	vertical-align: top;
+}
