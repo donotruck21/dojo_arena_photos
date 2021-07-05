@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="arena.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("button").hover(function () {
+                var temp = "url(" + $(this).attr("imgLoc") + ")";
+                $(".container").css("background-image", temp);
+            }, function () {
+                $(".container").css("background-image", "none");
+            });
+
+            $("button").click(function () {
+                $("button").hide();
+                $("article").html("<h1>Select Players</h1>");
+
+                $("article").append("<select id=player1>");
+                $("article").append("<select id=player2>");
+
+                $("select").append("<option value='Select Player'>Select Player</option>");
+
+                $("select").append("<option value='donny.png'>Donny</option>");
+
+                $("select").append("<option value='mikey.png'>Michael</option>");
+
+                $("select").append("<option value='leo.png' >Leo</option>");
+
+                $("select").append("<option value='raphael.png' >Raphael</option></select>");
+
+            });
+
+            $(document).on("change", "#player1", function () {
+                var temp = $(this).val();
+                
+                $("#img1").attr("src", temp);
+            });
+
+            $(document).on("change", "#player2", function () {
+                var temp = $(this).val();
+                $("#img2").attr("src", temp);
+            });
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <article>
+            <h1>Select Arena</h1>
+            <div class="box">
+                <button imgLoc="beach.jpg">Beach</button>
+                <button imgLoc="earth.jpg">Planet</button>
+                <button imgLoc="dojo.jpg">Dojo</button>
+            </div>
+
+            <div class="box">
+                <button imgLoc="forest.jpg">Forest</button>
+                <button imgLoc="matrix.jpg">Matrix</button>
+                <button imgLoc="snow.jpg">Snow</button>
+            </div>
+        </article>
+
+        <div class="playerOne">
+            <img id="img1" src="" alt="player1">
+        </div>
+
+        <div class="playerTwo">
+            <img id="img2" src="" alt="player2">
+        </div>
+    </div>
+</body>
+
+</html>
